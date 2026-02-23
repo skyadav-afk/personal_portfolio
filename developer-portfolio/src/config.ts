@@ -60,7 +60,7 @@ export const config = {
             title: "AI-Based Exam Evaluator",
             category: "AI / Computer Vision",
             technologies: "Python, OpenCV, PIL, Machine Learning",
-            image: "/images/AI_based_exam_evaluation.png",
+            image: `${import.meta.env.BASE_URL}images/AI_based_exam_evaluation.png`,
             description: "Built an automated evaluation system for theoretical and OMR exams using OpenCV and PIL. Enables fast and accurate grading with AI-based image processing and answer detection.",
             githubLink: "https://github.com/shailendra31888/exam-evaluation"
         },
@@ -69,7 +69,7 @@ export const config = {
             title: "Smart Chatbot with LangChain",
             category: "AI / LLM",
             technologies: "Python, LangChain, FAISS, OpenAI API",
-            image: "/images/ai_based_chatbot.png",
+            image: `${import.meta.env.BASE_URL}images/ai_based_chatbot.png`,
             description: "Developed a multi-LLM chatbot with LangChain and vector memory. Routes domain-specific queries intelligently and retains full conversational context using FAISS vector store.",
             githubLink: "https://github.com/shailendra31888/SmartChatbot"
         },
@@ -78,7 +78,7 @@ export const config = {
             title: "Pokémon MCP Server",
             category: "AI / MCP",
             technologies: "Python, MCP, PokéAPI, Streamlit, FastAPI",
-            image: "/images/pokemon_mcp.png",
+            image: `${import.meta.env.BASE_URL}images/pokemon_mcp.png`,
             description: "A comprehensive MCP (Model Context Protocol) server providing AI models with three capabilities: 🐾 Pokémon Data Resource exposing stats, types, abilities, moves, and evolution chains from PokéAPI; ⚔️ Battle Simulation Tool with type effectiveness, stats-based damage calculations, turn order, and status effects; 🎮 Interactive Streamlit Web Demo with battle simulation and detailed analytics.",
             githubLink: "https://github.com/shailendra31888/pokemon_Mcp-server"
         },
@@ -87,7 +87,7 @@ export const config = {
             title: "Credit Risk Model",
             category: "ML / Data Science",
             technologies: "Python, Scikit-learn, Pandas, NumPy, Random Forest",
-            image: "/images/credit_risk.png",
+            image: `${import.meta.env.BASE_URL}images/credit_risk.png`,
             description: "Built an ML pipeline to predict delinquent borrowers with feature engineering and model tuning. Improved targeting accuracy using Random Forest classifier on financial datasets."
         }
     ],

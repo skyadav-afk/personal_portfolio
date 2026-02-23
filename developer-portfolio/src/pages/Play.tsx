@@ -374,7 +374,7 @@ const Play = () => {
           <div className="player-bar opponent-bar">
             <div className="player-info">
               <div className="player-avatar">
-                <img src="/images/my_pic.jpg" alt="Shailendra" />
+                <img src={`${import.meta.env.BASE_URL}images/my_pic.jpg`} alt="Shailendra" />
               </div>
               <div className="player-details">
                 <span className="player-name">Shailendra</span>
