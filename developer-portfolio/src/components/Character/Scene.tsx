@@ -54,7 +54,13 @@ const Scene = () => {
       let progress = setProgress((value) => setLoading(value));
       const { loadCharacter } = setCharacter(renderer, scene, camera);
 
+      // Safety timeout: if model fails to load within 12s, clear loading anyway
+      const loadingTimeout = setTimeout(() => {
+        progress.clear();
+      }, 12000);
+
       loadCharacter().then((gltf) => {
+        clearTimeout(loadingTimeout);
         if (gltf) {
           const animations = setAnimations(gltf);
           hoverDivRef.current && animations.hover(gltf, hoverDivRef.current);
@@ -74,6 +80,9 @@ const Scene = () => {
             handleResize(renderer, camera, canvasDiv, character)
           );
         }
+      }).catch(() => {
+        clearTimeout(loadingTimeout);
+        progress.clear();
       });
 
       let mouse = { x: 0, y: 0 },
