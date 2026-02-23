@@ -11,7 +11,7 @@ import { LoadingProvider } from "./context/LoadingProvider";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/personal_portfolio/">
       <Routes>
         <Route
           path="/"
