@@ -27,3 +27,8 @@ dist-ssr
 backup/
 .env
 redoxchess-engine/
+
+# next.js
+.next
+next-env.d.ts
+*.tsbuildinfo
