@@ -2,6 +2,7 @@ import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 import { Icons } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import { DATA } from "@/data/resume";
+import { PhoneIcon } from "lucide-react";
 
 export default function ContactSection() {
   return (
@@ -25,10 +26,10 @@ export default function ContactSection() {
           Get in Touch
         </h2>
         <p className="mx-auto max-w-lg text-muted-foreground text-balance">
-          Want to chat? Send me an email or reach out on LinkedIn and
-          I&apos;ll respond whenever I can.
+          Want to chat? Send me an email, reach out on LinkedIn, or give me
+          a call and I&apos;ll respond whenever I can.
         </p>
-        <div className="flex w-full flex-col gap-3 pt-2 sm:w-auto sm:flex-row">
+        <div className="flex w-full flex-col gap-3 pt-2 sm:w-auto sm:flex-row sm:flex-wrap sm:justify-center">
           <Button asChild size="lg" className="w-full gap-2 sm:w-auto">
             <a href={`mailto:${DATA.contact.email}`}>
               <Icons.email className="size-4" />
@@ -48,6 +49,17 @@ export default function ContactSection() {
             >
               <Icons.linkedin className="size-4" />
               Contact via LinkedIn
+            </a>
+          </Button>
+          <Button
+            asChild
+            size="lg"
+            variant="outline"
+            className="w-full gap-2 sm:w-auto"
+          >
+            <a href={`tel:${DATA.contact.tel}`}>
+              <PhoneIcon className="size-4" />
+              {DATA.contact.telDisplay}
             </a>
           </Button>
         </div>

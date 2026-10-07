@@ -62,7 +62,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark" suppressHydrationWarning>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased relative",
@@ -70,7 +70,7 @@ export default function RootLayout({
           geistMono.variable
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="light">
+        <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark">
           <TooltipProvider delayDuration={0}>
             <div className="absolute inset-0 top-0 left-0 right-0 h-[100px] overflow-hidden z-0">
               <FlickeringGrid
